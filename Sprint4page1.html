@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" type = "text/css" href ="Sprint4CSS.css">
+</head>
+<body>
+<div class = "shapka">
+    <div class = "tweet">
+        TWITTER
+    </div>
+    <div = class = "ssylka">
+    <div>
+        <a href = "">Tweets</a>
+    </div>
+    <div>
+        <a href="Sprint4page3.html">Login</a>
+    </div>
+    <div>
+        <a href="Sprint4page2.html">Register</a>
+    </div>
+</div>
+</div>
+<div class="reg">
+    <div class = "tex">
+        <div>EMAIL:</div>
+        <div>
+            <p id = "em"></p>
+        </div>
+    </div>
+    <div class = "tex">
+        <div>PASSWORD:</div>
+        <div>
+            <p id = "ps"></p>
+        </div>
+    </div>
+    <div class = "tex">
+        <div>FULL NAME:</div>
+        <div>
+            <p id = "fn"></p>
+        </div>
+    </div>
+    <div class="tex">
+        <div>COUNTRY:</div>
+        <div>
+            <p id = "cn"></p>
+        </div>
+    </div>
+    <div class="tex">
+        <div>BIRTHDATE:</div>
+        <div>
+            <p id = "bd"></p>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    let result = location.search.substring(1);
+    const data = JSON.parse(localStorage.getItem(result));
+    document.getElementById('em').textContent = data.email;
+    document.getElementById('ps').textContent = data.password;
+    document.getElementById('fn').textContent = data.fullname;
+    document.getElementById('cn').textContent = data.country;
+    document.getElementById('bd').textContent = data.date;
+    document.getElementById('wel').textContent = Welcome + data.name;
+</script>
+</html>
